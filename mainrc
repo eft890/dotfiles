@@ -1,0 +1,4 @@
+SHS=$HOME/.sh-settings
+
+source $SHS/.envrc
+source $SHS/.zshrc
