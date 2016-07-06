@@ -50,6 +50,21 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # source /Users/Edd/.gulp-autocompletion-zsh/gulp-autocompletion.zsh
 
+# Custom aliases
+alias rmd='rm -rf'
+alias dfh='df -H'
+
+alias gdh='gd HEAD'
+alias grm='git rm'
+
+alias npme='PATH=$(npm bin):$PATH'
+
+alias doc=docker
+alias docm=docker-machine
+alias docc=docker-compose
+
+alias her=heroku
+
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/Edd/Library/google-cloud-sdk/path.zsh.inc'
 

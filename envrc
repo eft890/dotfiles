@@ -1,9 +1,0 @@
-alias rmd='rm -rf'
-alias npme='PATH=$(npm bin):$PATH'
-alias dfh='df -H'
-
-alias doc=docker
-alias docm=docker-machine
-alias docc=docker-compose
-
-alias her=heroku
