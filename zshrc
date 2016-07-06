@@ -50,6 +50,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # source /Users/Edd/.gulp-autocompletion-zsh/gulp-autocompletion.zsh
 
+export VISUAL=$(which nvim)
+export EDITOR=$(which nvim)
+
 # Custom aliases
 alias rmd='rm -rf'
 alias dfh='df -H'
