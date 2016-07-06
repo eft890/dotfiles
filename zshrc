@@ -60,6 +60,8 @@ alias dfh='df -H'
 alias gdh='gd HEAD'
 alias grm='git rm'
 
+alias nv=nvim
+
 alias npmi='npm install'
 
 alias doc=docker
