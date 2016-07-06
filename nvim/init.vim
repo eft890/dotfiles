@@ -27,9 +27,30 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 colorscheme solarized
 
+" Reduce command phrase time
 set timeoutlen=200
 
-nnoremap qq <C-o>:q<Enter>
+" Quitting
+nnoremap qq :q<Enter>
 inoremap qq <C-o>:q<Enter>
-nnoremap QQ <C-o>:q!<Enter>
+nnoremap QQ :q!<Enter>
 inoremap QQ <C-o>:q!<Enter>
+nnoremap WQ :wq<Enter>
+inoremap WQ <C-o>:wq<Enter>
+
+" Saving
+nnoremap WW :w<Enter>
+inoremap WW <C-o>:w<Enter>
+
+" Insert mode navigation
+inoremap ii <Esc>
+inoremap II <Esc>I
+inoremap AA <Esc>A
+inoremap OO <Esc>O
+inoremap oo <Esc>o
+
+" Insert mode line mods
+inoremap CC <Esc>C
+inoremap SS <Esc>S
+inoremap DD <Esc>dd
+inoremap uu <Esc>u
