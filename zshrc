@@ -19,7 +19,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"	# git status shows clean with untracked fil
 plugins=(git zsh-autosuggestions /	# should be in $ZSH_CUSTOM/plugins/
 	 zsh-syntax-highlighting man /
 	 history history-substring-search /
-	 zsh-autopair)
+	 zsh-autopair npm)
 bindkey '^ ' autosuggest-accept
 
 ###############################################################################
@@ -60,7 +60,7 @@ alias dfh='df -H'
 alias gdh='gd HEAD'
 alias grm='git rm'
 
-alias npme='PATH=$(npm bin):$PATH'
+alias npmi='npm install'
 
 alias doc=docker
 alias docm=docker-machine

@@ -26,3 +26,10 @@ set softtabstop=2
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 colorscheme solarized
+
+set timeoutlen=200
+
+nnoremap qq <C-o>:q<Enter>
+inoremap qq <C-o>:q<Enter>
+nnoremap QQ <C-o>:q!<Enter>
+inoremap QQ <C-o>:q!<Enter>
