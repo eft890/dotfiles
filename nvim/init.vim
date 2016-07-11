@@ -14,6 +14,7 @@ Plug 'scrooloose/nerdtree'
 
 " Syntax
 Plug 'jiangmiao/auto-pairs'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
@@ -54,3 +55,6 @@ inoremap CC <Esc>C
 inoremap SS <Esc>S
 inoremap DD <Esc>dd
 inoremap uu <Esc>u
+
+" Shortcuts
+nnoremap <C-n> :NERDTreeToggle<Enter>

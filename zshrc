@@ -59,6 +59,8 @@ alias dfh='df -H'
 
 alias gdh='gd HEAD'
 alias grm='git rm'
+alias gpuo='gp -u origin'
+alias gh='cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep'
 
 alias nv=nvim
 
