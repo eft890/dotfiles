@@ -31,9 +31,10 @@ colorscheme solarized
 " Reduce command phrase time
 set timeoutlen=200
 
-" NerdTree setup
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" NERDTree setup
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Quitting
@@ -43,6 +44,10 @@ nnoremap QQ :q!<Enter>
 inoremap QQ <C-o>:q!<Enter>
 nnoremap WQ :wq<Enter>
 inoremap WQ <C-o>:wq<Enter>
+nnoremap qa :qa<Enter>
+inoremap qa <C-o>:qa<Enter>
+nnoremap QA :qa!<Enter>
+inoremap QA <C-o>:qa!<Enter>
 
 " Saving
 nnoremap WW :w<Enter>
