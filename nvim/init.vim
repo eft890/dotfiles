@@ -12,6 +12,7 @@ Plug 'bling/vim-airline'                        " Better vim status bar
 " Utilities
 Plug 'scrooloose/nerdtree'                      " Vim file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'              " Show git status of files in NERDTree
+Plug 'scrooloose/nerdcommenter'                 " Commenting utilities
 Plug 'jeffkreeftmeijer/vim-numbertoggle'        " Line number toggling utility
 
 " Syntax
