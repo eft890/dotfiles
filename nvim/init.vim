@@ -50,4 +50,4 @@ nnoremap QQ :q!<cr>
 nnoremap qa :qa<cr>
 nnoremap QA :qa!<cr>
 nnoremap WW :w<cr>
-nnoremap WQ :wq<cr>
+nnoremap wq :wq<cr>
