@@ -48,7 +48,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# source /Users/Edd/.gulp-autocompletion-zsh/gulp-autocompletion.zsh
+# source ~/.gulp-autocompletion-zsh/gulp-autocompletion.zsh
 
 export VISUAL=$(which nvim)
 export EDITOR=$(which nvim)
@@ -73,10 +73,20 @@ alias docc=docker-compose
 
 alias her=heroku
 
+export GOOGLE_CLOUD_SDK_ROOT='~/Library/google-cloud-sdk'
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/Edd/Library/google-cloud-sdk/path.zsh.inc'
+if [ -d '$GOOGLE_CLOUD_SDK_ROOT' ] ; then
+  source '$GOOGLE_CLOUD_SDK_ROOT/google-cloud-sdk/path.zsh.inc'
+fi
 
 # The next line enables shell command completion for gcloud.
-source '/Users/Edd/Library/google-cloud-sdk/completion.zsh.inc'
+if [ -d '$GOOGLE_CLOUD_SDK_ROOT' ] ; then
+  source '$GOOGLE_CLOUD_SDK_ROOT/google-cloud-sdk/completion.zsh.inc'
+fi
+
+# Get nvm script
+export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 source $ZSH/oh-my-zsh.sh
+
