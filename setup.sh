@@ -15,4 +15,13 @@ if [ -d ~/.config/nvim ] ; then
   mv ~/.config/nvim ~/.config/nvim_bak
   echo 'nvim already exists in .config. Backing up as ~/.config/nvim_bak.'
 fi
-ln -s $DIR/nvim ~/.config/nvim
+ln -s $DIR/nvim ~/.config
+
+# Install neovim
+brew tap | grep neovim > /dev/null
+if [ $? = 0 ] ; then
+  echo 'neovim already installed.'
+else
+  brew install neovim/neovim/neovim
+fi
+nvim +PlugInstall +qa
