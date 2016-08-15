@@ -41,6 +41,11 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | else | NER
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 nnoremap <C-N> :NERDTreeToggle<cr>
 
+" NERDCommenter settings
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+
 " Disable arrow keys in insert mode
 inoremap <up> <nop>
 inoremap <down> <nop>

@@ -16,10 +16,28 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"	# git status shows clean with untracked fil
 # HIST_STAMPS="mm/dd/yyyy"		# formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # ZSH_CUSTOM=/path/to/new-custom-folder	# zsh custom config files
 
-plugins=(git zsh-autosuggestions /	# should be in $ZSH_CUSTOM/plugins/
-	 zsh-syntax-highlighting man /
-	 history history-substring-search /
-	 zsh-autopair npm zsh-nvm)
+# Source antigen for bundles
+source ~/dotfiles/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+# Built-in plugins
+antigen bundle git
+antigen bundle history
+antigen bundle history-substring-search
+antigen bundle man
+antigen bundle npm
+
+# Custom plugins
+antigen bundle hlissner/zsh-autopair
+antigen bundle lukechilds/zsh-nvm
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme agnoster
+
+antigen apply
+
 bindkey '^ ' autosuggest-accept
 
 ###############################################################################
@@ -82,6 +100,10 @@ fi
 # The next line enables shell command completion for gcloud.
 if [ -d '$GOOGLE_CLOUD_SDK_ROOT' ] ; then
   source '$GOOGLE_CLOUD_SDK_ROOT/google-cloud-sdk/completion.zsh.inc'
+fi
+
+if [ -f './keys' ] ; then
+  source ./keys
 fi
 
 source $ZSH/oh-my-zsh.sh
