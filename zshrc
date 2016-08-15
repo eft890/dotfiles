@@ -19,7 +19,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"	# git status shows clean with untracked fil
 plugins=(git zsh-autosuggestions /	# should be in $ZSH_CUSTOM/plugins/
 	 zsh-syntax-highlighting man /
 	 history history-substring-search /
-	 zsh-autopair npm)
+	 zsh-autopair npm zsh-nvm)
 bindkey '^ ' autosuggest-accept
 
 ###############################################################################
@@ -83,10 +83,6 @@ fi
 if [ -d '$GOOGLE_CLOUD_SDK_ROOT' ] ; then
   source '$GOOGLE_CLOUD_SDK_ROOT/google-cloud-sdk/completion.zsh.inc'
 fi
-
-# Get nvm script
-export NVM_DIR="~/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 source $ZSH/oh-my-zsh.sh
 
