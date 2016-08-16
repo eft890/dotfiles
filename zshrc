@@ -5,6 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 ###############################################################################
 
 ZSH_THEME="agnoster"
+DEFAULT_USER=`whoami`
 
 # CASE_SENSITIVE="true"			# case-sensitive completion
 # export UPDATE_ZSH_DAYS=13		# auto update frequency
@@ -14,6 +15,15 @@ COMPLETION_WAITING_DOTS="true"		# red waiting dots
 DISABLE_UNTRACKED_FILES_DIRTY="true"	# git status shows clean with untracked files
 # HIST_STAMPS="mm/dd/yyyy"		# formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # ZSH_CUSTOM=/path/to/new-custom-folder	# zsh custom config files
+
+# Source any settings on the local machine
+if [ -f ~/dotfiles/keys ] ; then
+  source ~/dotfiles/keys
+fi
+
+if [ -f ~/dotfiles/local_settings ] ; then
+  source ~/dotfiles/local_settings
+fi
 
 # Source antigen for bundles
 source ~/dotfiles/antigen/antigen.zsh
@@ -36,10 +46,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 bindkey '^ ' autosuggest-accept
-
-if [ -f './local_settings' ] ; then
-  source ./local_settings
-fi
 
 ###############################################################################
 #			         ZSH SETTINGS
@@ -101,10 +107,6 @@ fi
 # The next line enables shell command completion for gcloud.
 if [ -d '$GOOGLE_CLOUD_SDK_ROOT' ] ; then
   source '$GOOGLE_CLOUD_SDK_ROOT/google-cloud-sdk/completion.zsh.inc'
-fi
-
-if [ -f './keys' ] ; then
-  source ./keys
 fi
 
 source $ZSH/oh-my-zsh.sh
