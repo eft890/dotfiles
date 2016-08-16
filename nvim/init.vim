@@ -55,6 +55,9 @@ let g:NERDTrimTrailingWhitespace = 1
 " Signature settings
 let g:SignatureMarkTextHLDynamic = 1
 
+" Gitgutter settings
+let g:gitgutter_sign_column_always = 1
+
 " Disable arrow keys in insert mode
 inoremap <up> <nop>
 inoremap <down> <nop>
