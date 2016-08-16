@@ -69,3 +69,7 @@ inoremap dj <esc>
 " Quick disable highlighting
 " _ is actually / in this case
 nnoremap <C-_> :noh<cr>
+
+" Mark shortcuts
+nnoremap M :marks<cr>
+nnoremap <C-m> :delmarks<space>
