@@ -8,12 +8,14 @@ Plug 'scwood/vim-hybrid'
 " Display
 Plug 'ryanoasis/vim-devicons'                   " Better icon set for various vim utilities
 Plug 'bling/vim-airline'                        " Better vim status bar
+Plug 'kshenoy/vim-signature'                    " Display marks in gutter
 
 " Utilities
 Plug 'scrooloose/nerdtree'                      " Vim file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'              " Show git status of files in NERDTree
 Plug 'scrooloose/nerdcommenter'                 " Commenting utilities
 Plug 'jeffkreeftmeijer/vim-numbertoggle'        " Line number toggling utility
+Plug 'airblade/vim-gitgutter'                   " Git gutter on left of line numbers
 
 " Syntax
 Plug 'jiangmiao/auto-pairs'                     " Auto-add punctuation pairs
@@ -34,6 +36,7 @@ set ruler                                       " Row and column counters
 set expandtab                                   " Spaces instead of tabs
 set shiftwidth=2                                " Two spaces
 set softtabstop=2
+set updatetime=250
 
 " NERDTree setup
 autocmd StdinReadPre * let s:std_in=1
@@ -48,6 +51,9 @@ let NERDTreeShowHidden = 1
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
+
+" Signature settings
+let g:SignatureMarkTextHLDynamic = 1
 
 " Disable arrow keys in insert mode
 inoremap <up> <nop>
@@ -69,7 +75,3 @@ inoremap dj <esc>
 " Quick disable highlighting
 " _ is actually / in this case
 nnoremap <C-_> :noh<cr>
-
-" Mark shortcuts
-nnoremap M :marks<cr>
-nnoremap <C-m> :delmarks<space>
