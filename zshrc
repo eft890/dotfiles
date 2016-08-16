@@ -5,7 +5,6 @@ export ZSH=$HOME/.oh-my-zsh
 ###############################################################################
 
 ZSH_THEME="agnoster"
-DEFAULT_USER="Edd"
 
 # CASE_SENSITIVE="true"			# case-sensitive completion
 # export UPDATE_ZSH_DAYS=13		# auto update frequency
@@ -34,11 +33,13 @@ antigen bundle lukechilds/zsh-nvm
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-antigen theme agnoster
-
 antigen apply
 
 bindkey '^ ' autosuggest-accept
+
+if [ -f './local_settings' ] ; then
+  source ./local_settings
+fi
 
 ###############################################################################
 #			         ZSH SETTINGS
