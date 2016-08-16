@@ -29,7 +29,7 @@ colorscheme solarized
 set rnu                                         " Default to relative line numbers on startup
 set hls                                         " Search highlight
 set cursorline                                  " Highlight current line
-hi CursorLine cterm=NONE guibg=darkred          " Set highlight line colors
+hi CursorLine cterm=NONE guibg=#391414          " Set highlight line colors
 set ruler                                       " Row and column counters
 set expandtab                                   " Spaces instead of tabs
 set shiftwidth=2                                " Two spaces
