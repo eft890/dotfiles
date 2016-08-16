@@ -65,3 +65,7 @@ nnoremap wq :wq<cr>
 
 " Avoid escape
 inoremap dj <esc>
+
+" Quick disable highlighting
+" _ is actually / in this case
+nnoremap <C-_> :noh<cr>
