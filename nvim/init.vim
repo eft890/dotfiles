@@ -5,17 +5,17 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'mhartington/oceanic-next'
 Plug 'scwood/vim-hybrid'
 
-" Display
-Plug 'ryanoasis/vim-devicons'                   " Better icon set for various vim utilities
-Plug 'bling/vim-airline'                        " Better vim status bar
-Plug 'kshenoy/vim-signature'                    " Display marks in gutter
-
 " Utilities
 Plug 'scrooloose/nerdtree'                      " Vim file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'              " Show git status of files in NERDTree
 Plug 'scrooloose/nerdcommenter'                 " Commenting utilities
 Plug 'jeffkreeftmeijer/vim-numbertoggle'        " Line number toggling utility
 Plug 'airblade/vim-gitgutter'                   " Git gutter on left of line numbers
+
+" Display
+Plug 'ryanoasis/vim-devicons'                   " Better icon set for various vim utilities
+Plug 'bling/vim-airline'                        " Better vim status bar
+Plug 'kshenoy/vim-signature'                    " Display marks in gutter
 
 " Syntax
 Plug 'jiangmiao/auto-pairs'                     " Auto-add punctuation pairs
