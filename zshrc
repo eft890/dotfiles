@@ -109,5 +109,8 @@ if [ -d '$GOOGLE_CLOUD_SDK_ROOT' ] ; then
   source '$GOOGLE_CLOUD_SDK_ROOT/google-cloud-sdk/completion.zsh.inc'
 fi
 
+export NVM_DIR=~/.nvm
+source $NVM_DIR/nvm.sh
+
 source $ZSH/oh-my-zsh.sh
 
