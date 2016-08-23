@@ -11,6 +11,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'              " Show git status of files in NE
 Plug 'scrooloose/nerdcommenter'                 " Commenting utilities
 Plug 'jeffkreeftmeijer/vim-numbertoggle'        " Line number toggling utility
 Plug 'airblade/vim-gitgutter'                   " Git gutter on left of line numbers
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-fuzzy.vim'
 
 " Display
 Plug 'ryanoasis/vim-devicons'                   " Better icon set for various vim utilities
@@ -37,6 +39,7 @@ set expandtab                                   " Spaces instead of tabs
 set shiftwidth=2                                " Two spaces
 set softtabstop=2
 set updatetime=250
+set showcmd
 
 " NERDTree setup
 autocmd StdinReadPre * let s:std_in=1
@@ -58,6 +61,15 @@ let g:SignatureMarkTextHLDynamic = 1
 " Gitgutter settings
 let g:gitgutter_sign_column_always = 1
 
+" Incsearch.vim settings
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+set hlsearch
+map z/ <Plug>(incsearch-fuzzy-/)
+map z? <Plug>(incsearch-fuzzy-?)
+map zg/ <Plug>(incsearch-fuzzy-g/)
+
 " Disable arrow keys in insert mode
 inoremap <up> <nop>
 inoremap <down> <nop>
@@ -74,7 +86,3 @@ nnoremap wq :wq<cr>
 
 " Avoid escape
 inoremap dj <esc>
-
-" Quick disable highlighting
-" _ is actually / in this case
-nnoremap <C-_> :noh<cr>
