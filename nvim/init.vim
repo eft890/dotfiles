@@ -75,6 +75,8 @@ map z/ <Plug>(incsearch-fuzzy-/)
 map z? <Plug>(incsearch-fuzzy-?)
 map zg/ <Plug>(incsearch-fuzzy-g/)
 
+let mapleader = ","
+
 " Disable arrow keys in insert mode
 inoremap <up> <nop>
 inoremap <down> <nop>
@@ -82,12 +84,12 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 " Writing and quitting keymaps
-nnoremap qq :q<cr>
-nnoremap QQ :q!<cr>
-nnoremap qa :qa<cr>
-nnoremap QA :qa!<cr>
-nnoremap ww :w<cr>
-nnoremap wq :wq<cr>
+nnoremap <Leader>qq :q<cr>
+nnoremap <Leader>QQ :q!<cr>
+nnoremap <Leader>qa :qa<cr>
+nnoremap <Leader>QA :qa!<cr>
+nnoremap <Leader>ww :w<cr>
+nnoremap <Leader>wq :wq<cr>
 
 " Avoid escape
 inoremap dj <esc>
