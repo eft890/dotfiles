@@ -44,10 +44,8 @@ set showcmd
 " NERDTree setup
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | else | NERDTree | wincmd p | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-nnoremap <C-N> :NERDTreeToggle<cr>
-
-" NERDTree settings
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" nnoremap <silent> <C-n> :NERDTreeToggle<cr>
 let NERDTreeShowHidden = 1
 
 " NERDCommenter settings
@@ -74,6 +72,8 @@ map # <Plug>(incsearch-nohl-#)
 map z/ <Plug>(incsearch-fuzzy-/)
 map z? <Plug>(incsearch-fuzzy-?)
 map zg/ <Plug>(incsearch-fuzzy-g/)
+
+let g:UseNumberToggleTrigger = 1
 
 let mapleader = ","
 
