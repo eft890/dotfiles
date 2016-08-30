@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 export ZSH=$HOME/.oh-my-zsh
 
 ###############################################################################
@@ -39,7 +40,6 @@ antigen bundle npm
 
 # Custom plugins
 antigen bundle hlissner/zsh-autopair
-antigen bundle lukechilds/zsh-nvm
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
@@ -109,8 +109,8 @@ if [ -d '$GOOGLE_CLOUD_SDK_ROOT' ] ; then
   source '$GOOGLE_CLOUD_SDK_ROOT/google-cloud-sdk/completion.zsh.inc'
 fi
 
-export NVM_DIR=~/.nvm
-source $NVM_DIR/nvm.sh
+# Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
 source $ZSH/oh-my-zsh.sh
-
+# zprof
