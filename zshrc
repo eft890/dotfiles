@@ -10,7 +10,7 @@ DEFAULT_USER=`whoami`
 
 # CASE_SENSITIVE="true"			# case-sensitive completion
 # export UPDATE_ZSH_DAYS=13		# auto update frequency
-# DISABLE_AUTO_TITLE="true"		# terminal title auto-set
+DISABLE_AUTO_TITLE="true"		# terminal title auto-set
 # ENABLE_CORRECTION="true"		# command auto-correction
 COMPLETION_WAITING_DOTS="true"		# red waiting dots
 DISABLE_UNTRACKED_FILES_DIRTY="true"	# git status shows clean with untracked files
@@ -52,6 +52,10 @@ bindkey '^ ' autosuggest-accept
 ###############################################################################
 
 setopt interactivecomments		# allow comment commands
+precmd() {
+  # sets the tab title to current dir
+  echo -ne "\e]1;${PWD##*/}\a"
+}
 
 ###############################################################################
 #			         ENV SETTINGS
