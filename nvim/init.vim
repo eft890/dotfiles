@@ -45,6 +45,7 @@ set updatetime=250
 set showcmd
 set splitbelow
 set splitright
+set winminheight=0
 
 " NERDTree setup
 autocmd StdinReadPre * let s:std_in=1
