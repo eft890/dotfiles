@@ -72,7 +72,7 @@ let g:airline_mode_map = {
     \ 'S'  : 'S',
     \ '' : 'S',
     \ }
-let g:airline_theme = 'base16_solarized'
+let g:airline_theme = 'base16_google'
 
 " Signature settings
 let g:SignatureMarkTextHLDynamic = 1
