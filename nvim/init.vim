@@ -108,9 +108,9 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader><C-j> <C-w>J
 nnoremap <Leader><C-k> <C-w>K
 nnoremap <C-_> <C-w>_
-nnoremap <C-s> <C-w>s
+nnoremap <C-s> <C-w>s<C-w>_
 nnoremap <C-v> <C-w>v
-nnoremap <C-w><C-w> :q<cr>
+nnoremap <C-w><C-w> :q<cr><C-w>_
 
 " Move view pane
 nnoremap ∆ <C-e>
