@@ -16,7 +16,8 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 
 " Display
 Plug 'ryanoasis/vim-devicons'                   " Better icon set for various vim utilities
-Plug 'bling/vim-airline'                        " Better vim status bar
+Plug 'vim-airline/vim-airline'                  " Better vim status bar
+Plug 'vim-airline/vim-airline-themes'           " Themes!
 Plug 'kshenoy/vim-signature'                    " Display marks in gutter
 
 " Syntax
@@ -54,6 +55,24 @@ let NERDTreeShowHidden = 1
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
+
+" Airline settings
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ '' : 'V',
+    \ 's'  : 'S',
+    \ 'S'  : 'S',
+    \ '' : 'S',
+    \ }
+let g:airline_theme = 'base16_solarized'
 
 " Signature settings
 let g:SignatureMarkTextHLDynamic = 1
