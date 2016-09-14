@@ -34,6 +34,8 @@ set rnu                                         " Default to relative line numbe
 set hls                                         " Search highlight
 set cursorline                                  " Highlight current line
 hi CursorLine cterm=NONE guibg=#391414          " Set highlight line colors
+hi OverLength cterm=NONE guibg=#592929 guifg=#dddddd
+match OverLength /\%81v.\+/
 set ruler                                       " Row and column counters
 set expandtab                                   " Spaces instead of tabs
 set shiftwidth=2                                " Two spaces
@@ -76,6 +78,16 @@ map zg/ <Plug>(incsearch-fuzzy-g/)
 let g:UseNumberToggleTrigger = 1
 
 let mapleader = ","
+
+" Window control
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-_> <C-w>_
+nnoremap <C-s> <C-w>s
+nnoremap <C-v> <C-w>v
+nnoremap <C-w><C-w> :q<cr>
 
 " Disable arrow keys in insert mode
 inoremap <up> <nop>
