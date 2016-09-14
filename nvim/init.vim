@@ -1,58 +1,64 @@
 call plug#begin()
 
+" Utilities
+Plug 'scrooloose/nerdtree'                " File explorer
+Plug 'Xuyuanp/nerdtree-git-plugin'        " NERDTree git file status
+Plug 'scrooloose/nerdcommenter'           " Commenting utilities
+Plug 'airblade/vim-gitgutter'             " Git gutter
+Plug 'haya14busa/incsearch.vim'           " Improved search
+Plug 'haya14busa/incsearch-fuzzy.vim'     " Fuzzy searching
+
+" Display
+Plug 'ryanoasis/vim-devicons'             " Icon set for utilities
+Plug 'vim-airline/vim-airline'            " Status bar
+Plug 'kshenoy/vim-signature'              " Gutter marks
+Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Line number toggling utility
+
+" Syntax
+Plug 'jiangmiao/auto-pairs'               " Auto punctuation pairs
+Plug 'tpope/vim-surround'                 " Keymaps surrounding pairs
+Plug 'pangloss/vim-javascript'            " Javascript syntax highlighting
+
 " Colors
 Plug 'altercation/vim-colors-solarized'
 Plug 'mhartington/oceanic-next'
 Plug 'scwood/vim-hybrid'
-
-" Utilities
-Plug 'scrooloose/nerdtree'                      " Vim file explorer
-Plug 'Xuyuanp/nerdtree-git-plugin'              " Show git status of files in NERDTree
-Plug 'scrooloose/nerdcommenter'                 " Commenting utilities
-Plug 'jeffkreeftmeijer/vim-numbertoggle'        " Line number toggling utility
-Plug 'airblade/vim-gitgutter'                   " Git gutter on left of line numbers
-Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/incsearch-fuzzy.vim'
-
-" Display
-Plug 'ryanoasis/vim-devicons'                   " Better icon set for various vim utilities
-Plug 'vim-airline/vim-airline'                  " Better vim status bar
-Plug 'vim-airline/vim-airline-themes'           " Themes!
-Plug 'kshenoy/vim-signature'                    " Display marks in gutter
-
-" Syntax
-Plug 'jiangmiao/auto-pairs'                     " Auto-add punctuation pairs
-Plug 'tpope/vim-surround'                       " Keymaps for adding surrounding text
-Plug 'pangloss/vim-javascript'                  " Better vim javascript syntax highlighting
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+" Display settings
+set rnu                                   " Relative line numbers on startup
+set hls                                   " Search highlight
+set cursorline                            " Highlight current line
+set ruler                                 " Row and column counters
+set expandtab                             " Spaces instead of tabs
+set showcmd                               " Show commands being used
+set winminheight=0                        " Show no lines of collapsed win
+
+" Behaviour settings
+set updatetime=250                        " Time delay for gui updates
+set splitbelow                            " Cursor moves down on hsp
+set splitright                            " Cursor moves right on vsp
+
+" Color settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 colorscheme solarized
+hi CursorLine cterm=NONE guibg=#391414    " Highlight line colors
+hi OverLength cterm=NONE guibg=#802b2b guifg=#eeeeee " Overlength colors
+match OverLength /\%81v.\+/               " Highlight chars past column 80
 
-set rnu                                         " Default to relative line numbers on startup
-set hls                                         " Search highlight
-set cursorline                                  " Highlight current line
-hi CursorLine cterm=NONE guibg=#391414          " Set highlight line colors
-hi OverLength cterm=NONE guibg=#802b2b guifg=#eeeeee
-match OverLength /\%81v.\+/
-set ruler                                       " Row and column counters
-set expandtab                                   " Spaces instead of tabs
-set shiftwidth=2                                " Two spaces
-set softtabstop=2
-set updatetime=250
-set showcmd
-set splitbelow
-set splitright
-set winminheight=0
+" Formatting settings
+set shiftwidth=2                          " Indent shift (<</>>)
+set softtabstop=2                         " Indent shift (tab/<bs>)
 
-" NERDTree setup
+" NERDTree settings
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | on | endif
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " nnoremap <silent> <C-n> :NERDTreeToggle<cr>
-let NERDTreeShowHidden = 1
+let NERDTreeShowHidden = 1                " Show hidden files
 
 " NERDCommenter settings
 let g:NERDSpaceDelims = 1
@@ -97,8 +103,10 @@ map z/ <Plug>(incsearch-fuzzy-/)
 map z? <Plug>(incsearch-fuzzy-?)
 map zg/ <Plug>(incsearch-fuzzy-g/)
 
+" Use <C-n> toggle for numbering
 let g:UseNumberToggleTrigger = 1
 
+" Set leader key
 let mapleader = ","
 
 " Window control
@@ -109,13 +117,14 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader><C-j> <C-w>J
 nnoremap <Leader><C-k> <C-w>K
 nnoremap <C-_> <C-w>_
-nnoremap <C-s> <C-w>s<C-w>_
+nnoremap <C-s> <C-w>s<C-w>_z.
 nnoremap <C-v> <C-w>v
 nnoremap <C-w><C-w> :q<cr><C-w>_
 
 " Move view pane
 nnoremap ∆ <C-e>
 nnoremap ˚ <C-y>
+nnoremap ≥ z.
 
 " Disable arrow keys in insert mode
 inoremap <up> <nop>
