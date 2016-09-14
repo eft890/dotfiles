@@ -84,11 +84,16 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j<C-w>_
 nnoremap <C-k> <C-w>k<C-w>_
 nnoremap <C-l> <C-w>l
+nnoremap <Leader><C-j> <C-w>J
+nnoremap <Leader><C-k> <C-w>K
 nnoremap <C-_> <C-w>_
 nnoremap <C-s> <C-w>s
 nnoremap <C-v> <C-w>v
-nnoremap <C-x> <C-w>x
 nnoremap <C-w><C-w> :q<cr>
+
+" Move view pane
+nnoremap ∆ <C-e>
+nnoremap ˚ <C-y>
 
 " Disable arrow keys in insert mode
 inoremap <up> <nop>
