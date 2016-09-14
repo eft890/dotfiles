@@ -81,12 +81,13 @@ let mapleader = ","
 
 " Window control
 nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j<C-w>_
+nnoremap <C-k> <C-w>k<C-w>_
 nnoremap <C-l> <C-w>l
 nnoremap <C-_> <C-w>_
 nnoremap <C-s> <C-w>s
 nnoremap <C-v> <C-w>v
+nnoremap <C-x> <C-w>x
 nnoremap <C-w><C-w> :q<cr>
 
 " Disable arrow keys in insert mode
@@ -104,4 +105,4 @@ nnoremap <Leader>ww :w<cr>
 nnoremap <Leader>wq :wq<cr>
 
 " Avoid escape
-inoremap dj <esc>
+inoremap jd <esc>
