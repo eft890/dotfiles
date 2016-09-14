@@ -43,6 +43,8 @@ set shiftwidth=2                                " Two spaces
 set softtabstop=2
 set updatetime=250
 set showcmd
+set splitbelow
+set splitright
 
 " NERDTree setup
 autocmd StdinReadPre * let s:std_in=1
