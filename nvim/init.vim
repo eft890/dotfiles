@@ -35,7 +35,7 @@ set rnu                                         " Default to relative line numbe
 set hls                                         " Search highlight
 set cursorline                                  " Highlight current line
 hi CursorLine cterm=NONE guibg=#391414          " Set highlight line colors
-hi OverLength cterm=NONE guibg=#592929 guifg=#dddddd
+hi OverLength cterm=NONE guibg=#802b2b guifg=#eeeeee
 match OverLength /\%81v.\+/
 set ruler                                       " Row and column counters
 set expandtab                                   " Spaces instead of tabs
@@ -72,7 +72,7 @@ let g:airline_mode_map = {
     \ 'S'  : 'S',
     \ '' : 'S',
     \ }
-let g:airline_theme = 'base16_google'
+let g:airline_theme = 'bubblegum'
 
 " Signature settings
 let g:SignatureMarkTextHLDynamic = 1
