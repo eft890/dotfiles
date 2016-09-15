@@ -114,8 +114,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j<C-w>_z.
 nnoremap <C-k> <C-w>k<C-w>_z.
 nnoremap <C-l> <C-w>l
-nnoremap <Leader><C-j> <C-w>J
-nnoremap <Leader><C-k> <C-w>K
+nnoremap <Leader><C-j> <C-w>J<C-w>_
+nnoremap <Leader><C-k> <C-w>K<C-w>_
 nnoremap <C-_> <C-w>_
 nnoremap <C-s> <C-w>s<C-w>_z.
 nnoremap <C-v> <C-w>v
