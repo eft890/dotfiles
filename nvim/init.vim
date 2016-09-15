@@ -133,12 +133,12 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 " Writing and quitting keymaps
-nnoremap <Leader>qq :q<cr>
-nnoremap <Leader>QQ :q!<cr>
+nnoremap <Leader>qq :q<cr><C-w>_
+nnoremap <Leader>QQ :q!<cr><C-w>_
 nnoremap <Leader>qa :qa<cr>
 nnoremap <Leader>QA :qa!<cr>
 nnoremap <Leader>ww :w<cr>
-nnoremap <Leader>wq :wq<cr>
+nnoremap <Leader>wq :wq<cr><C-w>_
 
 " Avoid escape
 inoremap jd <esc>
