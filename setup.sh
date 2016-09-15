@@ -29,4 +29,6 @@ nvim +PlugInstall +qa
 
 # Fix iTerm backspace issue
 cd ~
-infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' | tic
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > ~/$TERM.ti
+tic ~/$TERM.ti
+rm ~/$TERM.ti
