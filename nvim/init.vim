@@ -57,7 +57,7 @@ set softtabstop=2                         " Indent shift (tab/<bs>)
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | on | endif
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" nnoremap <silent> <C-n> :NERDTreeToggle<cr>
+nnoremap <silent> † :NERDTreeToggle<cr>
 let NERDTreeShowHidden = 1                " Show hidden files
 
 " NERDCommenter settings
