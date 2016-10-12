@@ -1,8 +1,12 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 mkdir -p $DIR/antigen
 curl https://cdn.rawgit.com/zsh-users/antigen/v1.2.0/bin/antigen.zsh > $DIR/antigen/antigen.zsh
+mkdir $DIR/temp
+git clone git://github.com/altercation/vim-colors-solarized.git $DIR/temp/solarized
+mkdir $DIR/nvim/colors
+mv $DIR/temp/solarized/colors/solarized.vim $DIR/nvim/colors
+rm -rf $DIR/temp
 
 # Symbolic link zshrc
 if [ -f ~/.zshrc ] || [ -L ~/.zshrc ] ; then
@@ -42,3 +46,5 @@ cd ~
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > ~/$TERM.ti
 tic ~/$TERM.ti
 rm ~/$TERM.ti
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
