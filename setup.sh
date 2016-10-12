@@ -1,5 +1,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+mkdir -p $DIR/antigen
+curl https://cdn.rawgit.com/zsh-users/antigen/v1.2.0/bin/antigen.zsh > $DIR/antigen/antigen.zsh
+
 # Symbolic link zshrc
 if [ -f ~/.zshrc ] || [ -L ~/.zshrc ] ; then
   mv ~/.zshrc ~/.zshrc.bak
@@ -18,6 +21,7 @@ if [ ! -d ~/.config ] ; then
   mkdir ~/.config
 fi
 if [ -d ~/.config/nvim ] ; then
+  rm ~/.config/nvim_bak
   mv ~/.config/nvim ~/.config/nvim_bak
   echo 'nvim already exists in .config. Backing up as ~/.config/nvim_bak.'
 fi
