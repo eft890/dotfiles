@@ -21,6 +21,8 @@ if [ -f ~/.zshenv ] || [ -L ~/.zshenv ] ; then
 fi
 ln -s $DIR/zshenv ~/.zshenv
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Symbolic link nvim config
 if [ ! -d ~/.config ] ; then
   mkdir ~/.config
@@ -46,5 +48,3 @@ cd ~
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > ~/$TERM.ti
 tic ~/$TERM.ti
 rm ~/$TERM.ti
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
