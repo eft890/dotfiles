@@ -6,6 +6,11 @@ if [ -f ~/.zshrc ] || [ -L ~/.zshrc ] ; then
   echo '.zshrc already exists. Backing up as ~/.zshrc.bak.'
 fi
 ln -s $DIR/zshrc ~/.zshrc
+# Symbolic link zshenv
+if [ -f ~/.zshenv ] || [ -L ~/.zshenv ] ; then
+  mv ~/.zshenv ~/.zshenv.bak
+  echo '.zshenv already exists. Backing up as ~/.zshenv.bak.'
+fi
 ln -s $DIR/zshenv ~/.zshenv
 
 # Symbolic link nvim config
