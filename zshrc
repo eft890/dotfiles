@@ -79,6 +79,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # source ~/.gulp-autocompletion-zsh/gulp-autocompletion.zsh
 
+umask 770
+
 export VISUAL=$(which nvim)
 export EDITOR=$(which nvim)
 
