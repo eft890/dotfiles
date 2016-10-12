@@ -1,5 +1,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 mkdir -p $DIR/antigen
 curl https://cdn.rawgit.com/zsh-users/antigen/v1.2.0/bin/antigen.zsh > $DIR/antigen/antigen.zsh
 
