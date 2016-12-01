@@ -426,9 +426,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>2027 439 445 77 0 0 3360 1417 </string>
+	<string>2027 305 445 77 0 0 3360 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>515 244 796 473 0 0 3360 1417 </string>
+	<string>515 222 796 473 0 0 3360 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>1813 468 1180 748 0 0 3360 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1801,11 +1801,11 @@
 			<key>Name</key>
 			<string>Root</string>
 			<key>Non Ascii Font</key>
-			<string>MesloLGSNerdFontComplete---RegularForPowerline 10</string>
+			<string>MesloLGSNerdFontCompleteMono---RegularForPowerline 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGSNerdFontComplete---RegularForPowerline 10</string>
+			<string>MesloLGSNerdFontCompleteMono---RegularForPowerline 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1989,7 +1989,7 @@
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
