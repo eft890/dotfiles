@@ -34,6 +34,11 @@ if [ -d ~/.config/nvim ] ; then
 fi
 ln -s $DIR/nvim ~/.config
 
+if [ -d ~/.iterm  ] ; then
+  rm -rf ~/.iterm
+fi
+ln -s $DIR/.iterm ~/.iterm
+
 # Install neovim
 brew tap | grep neovim > /dev/null
 if [ $? = 0 ] ; then
