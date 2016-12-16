@@ -24,6 +24,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'mhartington/oceanic-next'
 Plug 'scwood/vim-hybrid'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'trusktr/seti.vim'
 
 call plug#end()
 
@@ -44,7 +45,7 @@ set splitright                            " Cursor moves right on vsp
 " Color settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme solarized
+colorscheme seti
 hi CursorLine cterm=NONE guibg=#391414    " Highlight line colors
 hi OverLength cterm=NONE guibg=#802b2b guifg=#eeeeee " Overlength colors
 match OverLength /\%81v.\+/               " Highlight chars past column 80
