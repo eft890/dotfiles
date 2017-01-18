@@ -18,6 +18,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Line number toggling utility
 Plug 'jiangmiao/auto-pairs'               " Auto punctuation pairs
 Plug 'tpope/vim-surround'                 " Keymaps surrounding pairs
 Plug 'pangloss/vim-javascript'            " Javascript syntax highlighting
+Plug 'vim-syntastic/syntastic'            " Syntax checking
 
 " Colors
 Plug 'altercation/vim-colors-solarized'
@@ -103,6 +104,21 @@ map # <Plug>(incsearch-nohl-#)
 map z/ <Plug>(incsearch-fuzzy-/)
 map z? <Plug>(incsearch-fuzzy-?)
 map zg/ <Plug>(incsearch-fuzzy-g/)
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatusLineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Use <C-n> toggle for numbering
 let g:UseNumberToggleTrigger = 1
