@@ -90,6 +90,7 @@ alias dfh='df -H'
 alias psg='ps | grep -v grep | grep'
 
 alias gdh='gd HEAD'
+alias gdhh='gd HEAD^'
 alias grm='git rm'
 alias gpuo='gp -u origin'
 alias gw='cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep'
