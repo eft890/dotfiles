@@ -42,6 +42,7 @@ antigen bundle npm
 antigen bundle hlissner/zsh-autopair
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle bobthecow/git-flow-completion
 
 antigen apply
 
