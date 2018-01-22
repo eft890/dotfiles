@@ -91,7 +91,7 @@ alias dfh='df -H'
 alias psg='ps | grep -v grep | grep'
 
 alias gdh='gd HEAD'
-alias gdhh='gd HEAD^'
+alias gdhh='gd HEAD~1'
 alias grm='git rm'
 alias gpuo='gp -u origin'
 alias gw='cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep'
@@ -105,6 +105,10 @@ alias docm=docker-machine
 alias docc=docker-compose
 
 alias her=heroku
+
+# Special keybinds
+bindkey "^[D" backward-word
+bindkey "^[C" forward-word
 
 export GOOGLE_CLOUD_SDK_ROOT='~/Library/google-cloud-sdk'
 # The next line updates PATH for the Google Cloud SDK.
@@ -122,3 +126,6 @@ export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PR
 
 source $ZSH/oh-my-zsh.sh
 # zprof
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
