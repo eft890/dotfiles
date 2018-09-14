@@ -89,7 +89,7 @@ let g:airline_theme = 'bubblegum'
 let g:SignatureMarkTextHLDynamic = 1
 
 " Gitgutter settings
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 
 " Incsearch.vim settings
 map / <Plug>(incsearch-forward)
