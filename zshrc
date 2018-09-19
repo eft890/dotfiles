@@ -43,6 +43,7 @@ antigen bundle hlissner/zsh-autopair
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle bobthecow/git-flow-completion
+antigen bundle zpm-zsh/autoenv
 
 antigen apply
 
