@@ -44,7 +44,7 @@ brew tap | grep neovim > /dev/null
 if [ $? = 0 ] ; then
   echo 'neovim already installed.'
 else
-  brew install neovim/neovim/neovim
+  brew install neovim
 fi
 nvim +PlugInstall +qa
 
