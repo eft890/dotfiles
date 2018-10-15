@@ -42,6 +42,7 @@ set winminheight=0                        " Show no lines of collapsed win
 set updatetime=250                        " Time delay for gui updates
 set splitbelow                            " Cursor moves down on hsp
 set splitright                            " Cursor moves right on vsp
+set mouse=a                               " Mouse scrolls viewport instead of lines
 
 " Color settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
