@@ -160,3 +160,6 @@ nnoremap <Leader>wq :wq<cr><C-w>_
 
 " Avoid escape
 inoremap jd <esc>
+
+" Niceties
+inoremap <Leader>o <C-c>o
