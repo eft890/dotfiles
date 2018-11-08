@@ -7,6 +7,7 @@ Plug 'scrooloose/nerdcommenter'           " Commenting utilities
 Plug 'airblade/vim-gitgutter'             " Git gutter
 Plug 'haya14busa/incsearch.vim'           " Improved search
 Plug 'haya14busa/incsearch-fuzzy.vim'     " Fuzzy searching
+Plug 'tpope/vim-obsession'                " Session saving
 
 " Display
 Plug 'ryanoasis/vim-devicons'             " Icon set for utilities

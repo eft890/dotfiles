@@ -20,6 +20,12 @@ if [ -f ~/.zshenv ] || [ -L ~/.zshenv ] ; then
   echo '.zshenv already exists. Backing up as ~/.zshenv.bak.'
 fi
 ln -s $DIR/zshenv ~/.zshenv
+# Symbolic link tmux
+if [ -f ~/.tmux.conf ] || [ -L ~/.tmux.conf ] ; then
+  mv ~/.tmux.conf ~/.tmux.conf.bak
+  echo '.tmux.conf already exists. Backing up as ~/.tmux.conf.bak.'
+fi
+ln -s $DIR/tmux.conf ~/.tmux.conf
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
