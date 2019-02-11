@@ -164,3 +164,5 @@ inoremap jd <esc>
 
 " Niceties
 inoremap <Leader>o <C-c>o
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
