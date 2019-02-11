@@ -1,4 +1,5 @@
 # zmodload zsh/zprof
+export ZSH_DISABLE_COMPFIX=true
 export ZSH=$HOME/.oh-my-zsh
 
 ###############################################################################
