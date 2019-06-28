@@ -166,3 +166,7 @@ inoremap jd <esc>
 inoremap <Leader>o <C-c>o
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
+
+" Swap 0^
+nnoremap 0 ^
+nnoremap ^ 0
