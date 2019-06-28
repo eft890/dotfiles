@@ -97,6 +97,7 @@ alias gdhh='gd HEAD~1'
 alias grm='git rm'
 alias gpuo='gp -u origin'
 alias gw='cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep'
+alias gwt='git worktree'
 
 alias nv=nvim
 
