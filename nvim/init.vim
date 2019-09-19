@@ -179,10 +179,11 @@ nnoremap <Leader>e :e
 nnoremap <Leader>. :so $MYVIMRC<cr>
 
 " Terminal
-autocmd BufWinEnter,WinEnter term://* res | startinsert
-nnoremap <Leader>, :e term://zsh<cr>
+autocmd BufWinEnter,WinEnter term://* startinsert | setlocal nornu nocursorline noruler signcolumn=no
+nmap <Leader><Leader> :e term://zsh<cr>
 tmap <Leader>s <C-\><C-n>
 tmap <Leader><Leader> <Leader>s:enew<cr><C-c>
+tmap <Leader>qa <C-\><C-n><Leader>qa
 tmap <Leader>qq <C-\><C-n><Leader>qq
 tmap <C-h> <C-\><C-n><C-h>
 tmap <C-j> <C-\><C-n><C-j>
@@ -190,10 +191,10 @@ tmap <C-k> <C-\><C-n><C-k>
 tmap <C-l> <C-\><C-n><C-l>
 tmap <C-s><C-s> <Leader>s<C-s><C-s><Leader><Leader>
 tmap <C-s><C-k> <Leader>s<C-s><C-k><Leader><Leader>
-tmap <C-s><C-d> <Leader>s<C-s><C-s>
+tmap <C-s><C-d> <Leader>s<C-s><C-s><Leader><Leader><Leader><Leader>
 tmap <C-v><C-v> <Leader>s<C-v><C-v><Leader><Leader>
 tmap <C-v><C-h> <Leader>s<C-v><C-h><Leader><Leader>
-tmap <C-v><C-d> <Leader>s<C-v><C-v>
+tmap <C-v><C-d> <Leader>s<C-v><C-v><Leader><Leader><Leader><Leader>
 
 " Swap 0^
 noremap 0 ^
