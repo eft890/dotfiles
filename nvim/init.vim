@@ -109,7 +109,7 @@ map zg/ <Plug>(incsearch-fuzzy-g/)
 
 " Syntastic settings
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatusLineFlag()}
+set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():''}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
@@ -129,16 +129,19 @@ let g:UseNumberToggleTrigger = 1
 let mapleader = ","
 
 " Window control
-nnoremap <C-h> <C-w>h
+"" Switch window
+nnoremap <C-h> <C-w>h 
 nnoremap <C-j> <C-w>j<C-w>_z.
 nnoremap <C-k> <C-w>k<C-w>_z.
 nnoremap <C-l> <C-w>l
+
+"" ??
 nnoremap <Leader><C-j> <C-w>J<C-w>_
 nnoremap <Leader><C-k> <C-w>K<C-w>_
 nnoremap <C-_> <C-w>_
+"" Split window
 nnoremap <C-s> <C-w>s<C-w>_z.
 nnoremap <C-v> <C-w>v
-nnoremap <C-w><C-w> :q<cr><C-w>_
 
 " Move view pane
 nnoremap ∆ <C-e>
@@ -163,9 +166,20 @@ nnoremap <Leader>wq :wq<cr><C-w>_
 inoremap jd <esc>
 
 " Niceties
-inoremap <Leader>o <C-c>o
+inoremap <C-o> <C-c>o
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
+nnoremap <Leader>e :e
+nnoremap <Leader>. :so $MYVIMRC<cr>
+
+" Terminal
+autocmd BufWinEnter,WinEnter term://* startinsert
+nnoremap <Leader>, :e term://zsh<cr>i
+tmap <Leader>qq <C-\><C-n><Leader>qq
+tmap <C-h> <C-\><C-n><C-h>
+tmap <C-j> <C-\><C-n><C-j>
+tmap <C-k> <C-\><C-n><C-k>
+tmap <C-l> <C-\><C-n><C-l>
 
 " Swap 0^
 noremap 0 ^
