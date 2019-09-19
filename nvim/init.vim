@@ -38,6 +38,7 @@ set ruler                                 " Row and column counters
 set expandtab                             " Spaces instead of tabs
 set showcmd                               " Show commands being used
 set winminheight=0                        " Show no lines of collapsed win
+set so=999
 
 " Behaviour settings
 set updatetime=250                        " Time delay for gui updates
@@ -129,10 +130,11 @@ let g:UseNumberToggleTrigger = 1
 let mapleader = ","
 
 " Window control
+autocmd BufWinEnter,WinEnter * res
 "" Switch window
 nnoremap <C-h> <C-w>h 
-nnoremap <C-j> <C-w>j<C-w>_z.
-nnoremap <C-k> <C-w>k<C-w>_z.
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "" ??
@@ -140,8 +142,12 @@ nnoremap <Leader><C-j> <C-w>J<C-w>_
 nnoremap <Leader><C-k> <C-w>K<C-w>_
 nnoremap <C-_> <C-w>_
 "" Split window
-nnoremap <C-s> <C-w>s<C-w>_z.
-nnoremap <C-v> <C-w>v
+nnoremap <C-s><C-s> <C-w>s
+nmap <C-s><C-k> <C-w>s<C-k>
+nmap <C-s><C-d> <C-s><C-s><Leader><Leader>
+nnoremap <C-v><C-v> <C-w>v
+nmap <C-v><C-h> <C-w>v<C-h>
+nmap <C-v><C-d> <C-v><C-v><Leader><Leader>
 
 " Move view pane
 nnoremap ∆ <C-e>
@@ -155,12 +161,12 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 " Writing and quitting keymaps
-nnoremap <Leader>qq :q<cr><C-w>_
-nnoremap <Leader>QQ :q!<cr><C-w>_
+nnoremap <Leader>qq :q<cr>
+nnoremap <Leader>QQ :q!<cr>
 nnoremap <Leader>qa :qa<cr>
 nnoremap <Leader>QA :qa!<cr>
 nnoremap <Leader>ww :w<cr>
-nnoremap <Leader>wq :wq<cr><C-w>_
+nnoremap <Leader>wq :wq<cr>
 
 " Avoid escape
 inoremap jd <esc>
@@ -173,13 +179,21 @@ nnoremap <Leader>e :e
 nnoremap <Leader>. :so $MYVIMRC<cr>
 
 " Terminal
-autocmd BufWinEnter,WinEnter term://* startinsert
+autocmd BufWinEnter,WinEnter term://* res | startinsert
 nnoremap <Leader>, :e term://zsh<cr>
+tmap <Leader>s <C-\><C-n>
+tmap <Leader><Leader> <Leader>s:enew<cr><C-c>
 tmap <Leader>qq <C-\><C-n><Leader>qq
 tmap <C-h> <C-\><C-n><C-h>
 tmap <C-j> <C-\><C-n><C-j>
 tmap <C-k> <C-\><C-n><C-k>
 tmap <C-l> <C-\><C-n><C-l>
+tmap <C-s><C-s> <Leader>s<C-s><C-s><Leader><Leader>
+tmap <C-s><C-k> <Leader>s<C-s><C-k><Leader><Leader>
+tmap <C-s><C-d> <Leader>s<C-s><C-s>
+tmap <C-v><C-v> <Leader>s<C-v><C-v><Leader><Leader>
+tmap <C-v><C-h> <Leader>s<C-v><C-h><Leader><Leader>
+tmap <C-v><C-d> <Leader>s<C-v><C-v>
 
 " Swap 0^
 noremap 0 ^
