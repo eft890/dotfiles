@@ -175,7 +175,8 @@ inoremap jd <esc>
 inoremap <C-o> <C-c>o
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
-nnoremap <Leader>e :e 
+nnoremap <Leader>E :e 
+nnoremap <Leader>e :e %:p:h/
 nnoremap <Leader>. :so $MYVIMRC<cr>
 
 " Terminal
