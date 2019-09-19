@@ -174,7 +174,7 @@ nnoremap <Leader>. :so $MYVIMRC<cr>
 
 " Terminal
 autocmd BufWinEnter,WinEnter term://* startinsert
-nnoremap <Leader>, :e term://zsh<cr>i
+nnoremap <Leader>, :e term://zsh<cr>
 tmap <Leader>qq <C-\><C-n><Leader>qq
 tmap <C-h> <C-\><C-n><C-h>
 tmap <C-j> <C-\><C-n><C-j>
