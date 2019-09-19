@@ -110,6 +110,10 @@ alias docc=docker-compose
 
 alias her=heroku
 
+function grepr() {
+  grep $1 -R .
+}
+
 # Special keybinds
 bindkey "^[D" backward-word
 bindkey "^[C" forward-word
