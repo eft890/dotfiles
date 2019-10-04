@@ -169,7 +169,7 @@ nnoremap <Leader>ww :w<cr>
 nnoremap <Leader>wq :wq<cr>
 
 " Avoid escape
-inoremap jd <esc>
+inoremap <esc> <nop>
 
 " Niceties
 inoremap <C-o> <C-c>o
@@ -186,6 +186,9 @@ tmap <Leader>s <C-\><C-n>
 tmap <Leader><Leader> <Leader>s:enew<cr><C-c>
 tmap <Leader>qa <C-\><C-n><Leader>qa
 tmap <Leader>qq <C-\><C-n><Leader>qq
+tmap <Leader>. <C-\><C-n><Leader>.
+tmap <Leader>e <C-\><C-n><Leader>e
+tmap <Leader>E <C-\><C-n><Leader>E
 tmap <C-h> <C-\><C-n><C-h>
 tmap <C-j> <C-\><C-n><C-j>
 tmap <C-k> <C-\><C-n><C-k>
